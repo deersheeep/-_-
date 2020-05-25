@@ -1,8 +1,6 @@
 $color:#650300;
 $bgcolor:#AA0601;
 
-/**/
-
 *,
 *::before,
 *::after {
@@ -14,6 +12,18 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+img {
+    /* RWD */
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 a {
     text-decoration: none;
     color: #ffffff;
@@ -23,12 +33,41 @@ a {
     display: flex;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
 .justify-content-between {
     justify-content: space-between;
+
+}
+
+.justify-content-center {
+    justify-content: center;
 }
 
 .align-items-center {
     align-items: center;
+}
+
+.mr-8 {
+    margin-right: 8px;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.flex-1 {
+    flex-grow: 1;
+}
+
+.flex-2 {
+    flex-grow: 2;
+}
+
+.flex-4 {
+    flex-grow: 4;
 }
 
 .container {
@@ -36,13 +75,15 @@ a {
     margin: 0 auto;
 }
 
-
-
+/*
+header */
 header {
     background-color: $bgcolor;
     color: #ffffff;
 }
 
+/*
+nav */
 nav {
     height: 108px;
     padding-left: 88px;
@@ -65,25 +106,69 @@ nav {
     }
 }
 
-.footer {
-    height: 338px;
+/*
+footer  */
+footer {
     color: #ffffff;
     background-color: $bgcolor;
+    /*display: flex;
+    justify-content:space-between; */
     padding-top: 48px;
-    padding-left: 88px;
-    padding-right: 88px;
+}
 
-    .footerList li {
-        margin-right: 48px;
-    }
+.footerLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
 
-    .footerSns li {
-        margin-left: 32px;
+    ul {
+        justify-content: start;
+
+        li {
+            margin-right: 48px;
+        }
     }
 }
 
-.copyright {
-    border-top: 1px solid #ffffff;
+.footerContent li {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    margin-bottom: 22px;
+}
+
+.footerContent img {
+    width: 48px;
+    margin-right: 12px;
+}
+
+.footerSns img {
+    width: 48px;
+    margin-left: 32px;
+}
+
+.footerLast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #fff;
+    padding-top: 24px;
+    margin-bottom: 27px;
+
+    h5 span {
+        margin-left: 62px;
+    }
+}
+
+.footerLast .copyright {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 80px;
+        margin-right: 38px;
+    }
 }
 
 
@@ -110,6 +195,7 @@ topImg  常搞不懂背景圖與標題的愛恨糾葛... */
     background: url(../images/banner.png) no-repeat;
     background-position: center center;
     background-size: cover;
+
     .title {
         color: $color;
         text-align: right;
@@ -118,7 +204,7 @@ topImg  常搞不懂背景圖與標題的愛恨糾葛... */
     h2 {
         font-size: 64px;
         font-weight: 600;
-        line-height: 96PX;
+        line-height: 96px;
     }
 
     h3 {
@@ -143,7 +229,7 @@ info    */
 
     h3 {
         color: $color;
-        font-size: 48px;
+        font-size: 3rem;
         font-weight: 600;
         text-align: center;
         margin-bottom: 60px;
@@ -166,15 +252,10 @@ info    */
 
         h4 {
             color: $color;
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 600;
             text-align: center;
             line-height: 36px;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 24px;
         }
     }
 }
@@ -183,40 +264,184 @@ info    */
 product 經典系列鏡框*/
 .product {
     margin-bottom: 80px;
+
     h2 {
         color: $color;
-        font-size: 48px;
+        font-size: 3rem;
         font-weight: 600;
         margin-bottom: 60px;
         text-align: center;
     }
-    
-    .productItem li a{
+
+    .productItem li {
         display: flex;
-        margin-bottom: 32px;
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
         h3 {
+            display: flex;
+            align-items: center;
             color: $bgcolor;
-            font-size: 48px;
+            font-size: 3rem;
+            font-weight: 700;
+            font-style: italic;
+            text-transform: uppercase;
+            margin-left: 1.5rem;
+
+            img {
+                margin-right: 8px;
+            }
+        }
+
+        &:nth-child(2) {
+            h3 {
+                margin-right: 1.5rem;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .colorItem {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background: url(../images/product-2-color.png) no-repeat;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                opacity: 0;
+                background-size: cover;
+                /*contain 使背景圖在尺寸大於內容元素的情況下，得以完整呈現。*/
+                background-position: center center;
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    /*.productItem li a {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        h3 {
+            align-self: center;
+            color: $bgcolor;
+            font-size: 3rem;
             font-weight: 700;
             font-style: italic;
         }
 
-    }
+    }*/
 }
+
+
 /*
 co-Brand 聯名設計鏡框 */
+
 .coBrand {
     background: url(../images/bg.png) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding-top: 64px;
+    padding-bottom: 64px;
 
-    .container {width: 1539px;}
     h2 {
         color: #ffffff;
-        font-size: 48px;
+        font-size: 3rem;
         font-weight: 600;
         text-align: center;
         margin-bottom: 60px;
     }
 }
+
+.coBrandList {
+    display: flex;
+
+    li:first-child {
+        margin-bottom: 3.75rem;
+    }
+}
+
+
+.itemBrand {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($color: #ffffff, $alpha: .5);
+    }
+
+    span {
+        color: $bgcolor;
+        font-size: 72px;
+        font-weight: 600;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* transform 垂直置中 */
+        z-index: 1;
+        white-space: nowrap;
+        /* 不換行 */
+    }
+
+    &:first-of-type {
+        margin-right: 1.25rem;
+    }
+}
+
+/*
+commend 顧客推薦 */
+.commend {
+    margin-bottom: 80px;
+
+    h2 {
+        color: #ffffff;
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    li {
+        width: 282px;
+        border: 1px solid #DEE2E6;
+
+        .commendTxt {
+            padding: 16px;
+
+            h4 {
+                font-weight: 600;
+                margin-bottom: 16px;
+            }
+
+            h5 {
+                color: #707070;
+            }
+
+            p {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
 /*
 contactUs  聯絡我們 */
 .contactUs {
@@ -224,33 +449,30 @@ contactUs  聯絡我們 */
     padding-top: 64px;
     padding-bottom: 92px;
 
-    h3 {
-        color: #000;
-        font-size: 48px;
-        font-weight: 600;
-        text-align: center;
-        margin-bottom: 24px;
-    }
+    .container {
+        width: 800px;
 
-    p {
-        font-size: 20px;
-        line-height: 30px;
-        margin-bottom: 15px;
-    }
-}
+        h3 {
+            color: #000;
+            font-size: 3rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 24px;
+        }
 
-.form-wrapper {
-    width: 800px;
-    margin: 0 auto;
+        p {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 15px;
+        }
+    }
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    font-size: 16px;
 
     label {
-        font-size: 16px;
         margin-bottom: 5px;
     }
 
@@ -258,8 +480,23 @@ contactUs  聯絡我們 */
         border: 1px solid #000;
         padding: 14px 16px;
         margin-bottom: 16px;
-    }    
+        background: transparent;
+        /*透明色*/
+        outline: 0;
+        /* 會影響到無障礙tab作用嗎? */
+    }
+
+    textarea {
+        height: 136px;
+        background: transparent;
+        margin-bottom: 16px;
+    }
+
+    .agree {
+        margin-bottom: 16px;
+    }
 }
+
 .btn {
     font-family: "Roboto", "Microsoft JhengHei";
     border: none;
@@ -267,67 +504,9 @@ contactUs  聯絡我們 */
     color: #ffffff;
     background-color: $bgcolor;
     padding: 16px 58px;
+
     &:hover {
         cursor: pointer;
         background-color: $color;
-    }
-}
-/*
-footer  */
-footer {
-    color: #fff;
-    background-color: #AA0601;
-    display: flex;
-    justify-content:space-between; 
-    padding-top: 48px;   
-}
-.footerLinks {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 32px;
-    ul {
-        display: flex;
-        li {
-            margin-right: 48px;
-        }
-    }
-}
-
-.footerContent li{
-    display: flex;
-    align-items: center;
-    font-size: 36px;
-    margin-bottom: 22px;
-}
-.footerContent img {
-    width: 48px;
-    margin-right: 12px;
-}
-.footerSns img {
-    width: 48px;    
-}
-.footerLast {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #fff;
-    padding-top: 24px;
-    margin-bottom: 27px;
-    h5 {
-        font-size:16px;
-        line-height: 24px;
-        span{
-            margin-left: 62px;
-        }
-    }
-}
-
-.footerLast .copyright {
-    display: flex;
-    align-items: center;
-    img {
-        width: 80px;
-        margin-right: 38px;
     }
 }

@@ -218,7 +218,8 @@ topImg  常搞不懂背景圖與標題的愛恨糾葛... */
 info    */
 .info {
   background-color: #AA06010D;
-  padding-top: 64px; }
+  padding-top: 64px;
+  margin-bottom: 64px; }
   .info h3 {
     color: #650300;
     font-size: 3rem;
@@ -229,21 +230,38 @@ info    */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     .info .item li {
       width: 210px;
       margin-bottom: 80px;
-      display: block; }
-    .info .item img {
-      width: 100px;
-      margin: 0 25% 40px; }
-    .info .item h4 {
-      color: #650300;
-      font-size: 1.5rem;
-      font-weight: 600;
-      text-align: center;
-      line-height: 36px; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .info .item li img {
+        width: 100px;
+        height: 100px;
+        /*margin: 0 25% 40px;*/
+        margin-bottom: 2.5rem; }
+      .info .item li h4 {
+        color: #650300;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        line-height: 36px; }
 
 /*
 product 經典系列鏡框*/

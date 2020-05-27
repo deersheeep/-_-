@@ -226,6 +226,7 @@ info    */
 .info {
     background-color: #AA06010D;
     padding-top: 64px;
+    margin-bottom: 64px;
 
     h3 {
         color: $color;
@@ -237,26 +238,34 @@ info    */
 
     .item {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
 
         li {
             width: 210px;
             margin-bottom: 80px;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                width: 100px;
+                height: 100px;
+                /*margin: 0 25% 40px;*/
+                margin-bottom: 2.5rem;
+            }
+            
+    
+            h4 {
+                color: $color;
+                font-size: 1.5rem;
+                font-weight: 600;
+                text-align: center;
+                line-height: 36px;
+            }
         }
 
-        img {
-            width: 100px;
-            margin: 0 25% 40px;
-        }
-
-        h4 {
-            color: $color;
-            font-size: 1.5rem;
-            font-weight: 600;
-            text-align: center;
-            line-height: 36px;
-        }
+        
     }
 }
 

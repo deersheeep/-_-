@@ -319,7 +319,8 @@ co-Brand 聯名設計鏡框 */
   background-size: cover;
   background-position: top center;
   padding-top: 64px;
-  padding-bottom: 64px; }
+  /*padding-bottom: 64px;*/
+  padding-bottom: 400px; }
   .coBrand h2 {
     color: #ffffff;
     font-size: 3rem;
@@ -361,9 +362,84 @@ co-Brand 聯名設計鏡框 */
   .itemBrand:first-of-type {
     margin-right: 1.25rem; }
 
+/*  more魔王 */
+.moreItem {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  .moreItem span {
+    position: absolute;
+    color: #AA0601;
+    font-size: 4.5rem;
+    font-weight: 700;
+    -webkit-transform: translate(0%, 20%);
+        -ms-transform: translate(0%, 20%);
+            transform: translate(0%, 20%);
+    white-space: nowrap;
+    z-index: 1; }
+    .moreItem span::before {
+      content: 'MORE';
+      position: absolute;
+      -webkit-transition: all .6s .3s;
+      -o-transition: all .6s .3s;
+      transition: all .6s .3s;
+      -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+              transform: translateY(0); }
+    .moreItem span::after {
+      content: 'MORE';
+      position: absolute;
+      -webkit-transition: all .6s .3s;
+      -o-transition: all .6s .3s;
+      transition: all .6s .3s;
+      -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+              transform: translateY(0); }
+    .moreItem span:hover::before {
+      -webkit-transform: translateY(-85px);
+          -ms-transform: translateY(-85px);
+              transform: translateY(-85px);
+      opacity: .7; }
+    .moreItem span:hover::after {
+      -webkit-transform: translateY(-145px);
+          -ms-transform: translateY(-145px);
+              transform: translateY(-145px);
+      opacity: .3; }
+
+.moreImg {
+  position: relative;
+  height: 100%;
+  max-width: 30%;
+  -webkit-transition: all .6s .3s;
+  -o-transition: all .6s .3s;
+  transition: all .6s .3s;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  margin-right: 85px; }
+  .moreImg::after {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    top: 15%;
+    bottom: 15%;
+    left: 10%;
+    right: -85px; }
+  .moreImg:hover img:last-child {
+    -webkit-transform: translateX(15px);
+        -ms-transform: translateX(15px);
+            transform: translateX(15px);
+    -webkit-transition: all .8s;
+    -o-transition: all .8s;
+    transition: all .8s;
+    /* 待修正, arrow動畫怪怪的 */ }
+  .moreImg span {
+    padding: 5px 0 5px 32px; }
+
 /*
 commend 顧客推薦 */
 .commend {
+  margin-top: -300px;
   margin-bottom: 80px; }
   .commend h2 {
     color: #ffffff;
@@ -373,9 +449,10 @@ commend 顧客推薦 */
     margin-bottom: 60px; }
   .commend li {
     width: 282px;
-    border: 1px solid #DEE2E6; }
+    background-color: #fff; }
     .commend li .commendTxt {
-      padding: 16px; }
+      padding: 16px;
+      border: 1px solid #DEE2E6; }
       .commend li .commendTxt h4 {
         font-weight: 600;
         margin-bottom: 16px; }
@@ -404,16 +481,11 @@ contactUs  聯絡我們 */
       margin-bottom: 15px; }
 
 .form-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  /*display: flex;
+    flex-direction: column;*/ }
   .form-group label {
     margin-bottom: 5px; }
-  .form-group input {
+  .form-group input, .form-group textarea {
     border: 1px solid #000;
     padding: 14px 16px;
     margin-bottom: 16px;
@@ -422,13 +494,35 @@ contactUs  聯絡我們 */
     outline: 0;
     /* 會影響到無障礙tab作用嗎? */ }
   .form-group textarea {
-    height: 136px;
-    background: transparent;
-    margin-bottom: 16px; }
+    height: 8.5rem;
+    resize: none; }
+  .form-group input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.2); }
+  .form-group input::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.2); }
+  .form-group input:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.2); }
+  .form-group input::-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.2); }
+  .form-group input::placeholder {
+    color: rgba(0, 0, 0, 0.2); }
+  .form-group textarea::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.2); }
+  .form-group textarea::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.2); }
+  .form-group textarea:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.2); }
+  .form-group textarea::-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.2); }
+  .form-group textarea::placeholder {
+    color: rgba(0, 0, 0, 0.2); }
   .form-group .agree {
     margin-bottom: 16px; }
 
 .btn {
+  display: block;
+  margin: 0 auto;
+  width: 180px;
   font-family: "Roboto", "Microsoft JhengHei";
   border: none;
   font-size: 16px;

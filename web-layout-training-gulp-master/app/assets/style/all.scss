@@ -354,7 +354,8 @@ co-Brand 聯名設計鏡框 */
     background-size: cover;
     background-position: top center;
     padding-top: 64px;
-    padding-bottom: 64px;
+    /*padding-bottom: 64px;*/
+    padding-bottom: 400px;
 
     h2 {
         color: #ffffff;
@@ -405,10 +406,71 @@ co-Brand 聯名設計鏡框 */
         margin-right: 1.25rem;
     }
 }
+/*  more魔王 */
+.moreItem { 
+    align-items: flex-end;
+    span {
+        position: absolute;
+        color: $bgcolor;
+        font-size: 4.5rem;
+        font-weight: 700;
+        transform: translate(0%,20%);
+        white-space: nowrap;
+        z-index: 1;
+
+        &::before {
+            content: 'MORE';
+            position: absolute;
+            transition: all .6s .3s;
+            transform: translateY(0);
+        }
+        &::after {
+            content: 'MORE';
+            position: absolute;
+            transition: all .6s .3s;
+            transform: translateY(0);
+        }
+        &:hover::before {
+            transform: translateY(-85px);
+            opacity: .7;
+        }
+        &:hover::after {
+            transform: translateY(-145px);
+            opacity: .3;
+        }
+    }
+}
+.moreImg {  
+    position: relative;
+    height: 100%;
+    max-width: 30%;
+    transition: all .6s .3s;
+    transform: translateX(0);
+    margin-right: 85px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background: #ffffff;
+        top: 15%;
+        bottom: 15%;
+        left:10%;
+        right: -85px;
+    }
+    &:hover img:last-child {
+        transform: translateX(15px);
+        transition: all .8s; /* 待修正, arrow動畫怪怪的 */
+    }
+    span {
+        padding: 5px 0 5px 32px;
+    }
+}
+
 
 /*
 commend 顧客推薦 */
 .commend {
+    margin-top: -300px;
     margin-bottom: 80px;
 
     h2 {
@@ -420,11 +482,12 @@ commend 顧客推薦 */
     }
 
     li {
-        width: 282px;
-        border: 1px solid #DEE2E6;
+        width: 282px;        
+        background-color: #fff;
 
         .commendTxt {
             padding: 16px;
+            border: 1px solid #DEE2E6;
 
             h4 {
                 font-weight: 600;
@@ -469,27 +532,30 @@ contactUs  聯絡我們 */
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
 
     label {
         margin-bottom: 5px;
     }
 
-    input {
+    input,textarea {
         border: 1px solid #000;
         padding: 14px 16px;
         margin-bottom: 16px;
-        background: transparent;
-        /*透明色*/
-        outline: 0;
-        /* 會影響到無障礙tab作用嗎? */
+        background: transparent;    /*透明色*/
+        outline: 0; /* 會影響到無障礙tab作用嗎? */
+    }
+    textarea {
+        height: 8.5rem;
+        resize: none;
+    }
+    input::placeholder {
+        color: rgba(0,0,0,.2);
     }
 
-    textarea {
-        height: 136px;
-        background: transparent;
-        margin-bottom: 16px;
+    textarea::placeholder {
+        color: rgba(0,0,0,.2);
     }
 
     .agree {
@@ -498,6 +564,9 @@ contactUs  聯絡我們 */
 }
 
 .btn {
+    display: block;
+    margin: 0 auto;
+    width: 180px;
     font-family: "Roboto", "Microsoft JhengHei";
     border: none;
     font-size: 16px;

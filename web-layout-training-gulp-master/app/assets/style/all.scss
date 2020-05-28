@@ -588,3 +588,17 @@ contactUs  聯絡我們 */
         background-color: $color;
     }
 }
+
+/* AOS */
+[data-aos="text-translateX-left"] {
+    transform: translateX(0px);
+    &.aos-animation {
+        transform: translateX(-50px);
+    }
+}
+/*視差-圖靠下*/
+[data-aos="bgImg-position-down"] {
+    &.aos-animate {
+        background-position: bottom center;
+    }
+}

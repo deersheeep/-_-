@@ -697,4 +697,20 @@ contactUs  聯絡我們 */
   cursor: pointer;
   background-color: #650300;
 }
+
+/* AOS */
+[data-aos="text-translateX-left"] {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+[data-aos="text-translateX-left"].aos-animation {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+
+/*視差-圖靠下*/
+[data-aos="bgImg-position-down"].aos-animate {
+  background-position: bottom center;
+}
 /*# sourceMappingURL=all.css.map */

@@ -1,284 +1,4 @@
 @charset "UTF-8";
-/*
-@import "index";
-@import "faq";*/
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html,
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-
-body {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-img {
-  /* RWD */
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-ul {
-  padding: 0;
-}
-
-.d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.flex-column {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.justify-content-between {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.justify-content-center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.align-items-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.mr-8 {
-  margin-right: 8px;
-}
-
-.mb-8 {
-  margin-bottom: 8px;
-}
-
-.flex-1 {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.flex-2 {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-}
-
-.flex-4 {
-  -webkit-box-flex: 4;
-      -ms-flex-positive: 4;
-          flex-grow: 4;
-}
-
-@media (max-width: 1920px) {
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 672px;
-  }
-}
-
-@media (max-width: 375px) {
-  .container {
-    max-width: 350px;
-  }
-  .footerList {
-    display: none;
-  }
-}
-
-/*
-header */
-header {
-  background-color: #AA0601;
-  color: #ffffff;
-}
-
-/*
-nav */
-.navBar {
-  /* 網站會有多個 nav 標籤,勿寫在html標籤上 */
-  height: 108px;
-  padding-left: 88px;
-  padding-right: 88px;
-}
-
-.navBar h1 {
-  width: 88px;
-  height: 49px;
-  background: url(../images/logo.png) no-repeat;
-}
-
-.navBar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.navBar ul li {
-  font-size: 20px;
-  margin-left: 64px;
-}
-
-.navBar ul li a:hover {
-  font-weight: 700;
-}
-
-/*
-footer  */
-footer {
-  color: #ffffff;
-  background-color: #AA0601;
-  padding-top: 48px;
-}
-
-.footerLinks {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 32px;
-}
-
-.footerLinks ul {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-.footerLinks ul li {
-  margin-right: 48px;
-}
-
-.footerContent li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2rem;
-  margin-bottom: 22px;
-}
-
-.footerContent img {
-  width: 48px;
-  margin-right: 12px;
-}
-
-.footerSns img {
-  width: 48px;
-  margin-left: 32px;
-}
-
-.footerLast {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-top: 1px solid #fff;
-  padding-top: 24px;
-  margin-bottom: 27px;
-}
-
-.footerLast h5 span {
-  margin-left: 62px;
-}
-
-.footerLast .copyright {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footerLast .copyright img {
-  width: 80px;
-  margin-right: 38px;
-}
-
-@media (max-width: 768px) {
-  .navBar {
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-  .navBar h1 {
-    width: 80px;
-  }
-  .navBar ul li {
-    margin-left: 28px;
-  }
-  .copyright img {
-    display: none;
-  }
-  .copyright h5 {
-    font-style: 14px;
-  }
-  .footerLinks ul li {
-    margin-right: 40px;
-  }
-  .footerContent img {
-    width: 23px;
-    margin-right: 12px;
-  }
-  .footerSns img {
-    width: 24px;
-    margin-left: 24px;
-  }
-}
-
-/* AOS */
-[data-aos="text-translateX-left"] {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-}
-
-[data-aos="text-translateX-left"].aos-animation {
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
-}
-
-/*視差-圖靠下*/
-[data-aos="bgImg-position-down"].aos-animate {
-  background-position: bottom center;
-}
-
 /*  
 topImg  常搞不懂背景圖與標題的愛恨糾葛... */
 .topImg {
@@ -286,16 +6,6 @@ topImg  常搞不懂背景圖與標題的愛恨糾葛... */
   background: url(../images/banner.png) no-repeat;
   background-position: center center;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 80px;
 }
 
 .topImg .title {
@@ -314,14 +24,20 @@ topImg  常搞不懂背景圖與標題的愛恨糾葛... */
   line-height: 54px;
 }
 
-/*
 .topImg-wrapper {
-    height: 840px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 100px;
-}*/
+  height: 840px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 100px;
+}
+
 /*
 info    */
 .info {
@@ -386,6 +102,20 @@ info    */
 product 經典系列鏡框*/
 .product {
   margin-bottom: 80px;
+  /*.productItem li a {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        h3 {
+            align-self: center;
+            color: $bgcolor;
+            font-size: 3rem;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+    }*/
 }
 
 .product h2 {
@@ -629,12 +359,12 @@ commend 顧客推薦 */
   margin-bottom: 16px;
 }
 
-.commend li .commendTxt p {
-  margin-bottom: 16px;
+.commend li .commendTxt h5 {
+  color: #707070;
 }
 
-.commend li .commendTxt .time {
-  color: #707070;
+.commend li .commendTxt p {
+  margin-bottom: 16px;
 }
 
 /*
@@ -739,93 +469,4 @@ contactUs  聯絡我們 */
   cursor: pointer;
   background-color: #650300;
 }
-
-/*
-Faq 常見問題 */
-.topImgFaq {
-  height: 304px;
-  background: url(../images/qa.png) no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin-bottom: 5.5rem;
-}
-
-.topImgFaq .topImgFaq-wrap {
-  height: 100%;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.topImgFaq .topImgFaq-wrap .title {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.topImgFaq .topImgFaq-wrap .title h2 {
-  font-size: 4rem;
-  font-weight: 700;
-}
-
-.faqMain {
-  margin-bottom: 9.75rem;
-}
-
-.faqMain h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-/* 收合 */
-.card-item {
-  border: 1px solid #000000;
-}
-
-.card-item:not(.active) .up {
-  display: none;
-}
-
-.card-item-header {
-  padding: 16px;
-  border-bottom: 1px solid #000000;
-}
-
-.card-item-header a {
-  text-decoration: none;
-  color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.card-item-header h4 {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: bold;
-}
-
-.card-item-body {
-  background-color: #F2F2F2;
-  padding: 16px;
-  font-size: 14px;
-  line-height: 21px;
-}
-
-.card-item.active .down {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .topImgFaq {
-    background: url(../images/qa_72.png) no-repeat;
-  }
-}
-/*# sourceMappingURL=all.css.map */
+/*# sourceMappingURL=index.css.map */

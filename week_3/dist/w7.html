@@ -19,7 +19,10 @@
                 <h1>
                     <a href="index.html"></a>
                 </h1>
-                <ul>
+                <a href="#" class="ham-icon">
+                    <img src="assets/images/icon-menu.svg" alt="ham-icon">
+                </a>
+                <ul class="dropdown">
                     <li><a href="index.html">系列鏡框</a></li>
                     <li><a href="#">門市據點</a></li>
                     <li><a href="#">部落格</a></li>
@@ -214,16 +217,16 @@
         <footer class="d-flex justify-content-between">
             <div class="container">
                 <div class="footerLinks d-flex justify-content-between">
-                    <ul class="d-flex">
+                    <ul class="d-flex dp-xs-none">
                         <li><a href="index.html">首頁</a></li>
                         <li><a href="#">系列鏡框</a></li>
                         <li><a href="#">門市據點</a></li>
                         <li><a href="#">部落格</a></li>
                         <li><a href="faq.html">常見問題</a></li>
                     </ul>
-                    <div class="footerSns d-flex">
-                        <a href="#"><img src="assets/images/icon-fb.svg" alt="fb"></a>
-                        <a href="#"><img src="assets/images/icon-ig.svg" alt="ig"></a>
+                    <div class="footerSns d-flex justify-content-xs-end">
+                        <a href="#" class="dp-xs-none"><img src="assets/images/icon-fb.svg" alt="fb"></a>
+                        <a href="#" class="dp-xs-none"><img src="assets/images/icon-ig.svg" alt="ig"></a>
                         <a href="#"><img src="assets/images/icon-line.svg" alt="line"></a>
                     </div>
                 </div>
@@ -233,13 +236,14 @@
                 </ul>
                 <div class="footerLast">
                     <div class="copyright">
-                        <img src="assets/images/logo.png" alt="logo">
+                        <img src="assets/images/logo.png" alt="logo" class="dp-md-none">
                         Copyright © 2020 Glasses.All rights reserved.</div>
                     <h5><a href="#"><span>隱私權政策</span></a><a href="#"><span>服務條款</span></a></h5>
                 </div>
             </div>
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
 </body>

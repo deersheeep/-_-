@@ -82,14 +82,23 @@ ul {
     margin: 0 auto; } }
 
 @media (max-width: 768px) {
+  .dp-md-none {
+    display: none; }
   .container {
     max-width: 672px; } }
 
 @media (max-width: 375px) {
+  .dp-xs-none {
+    display: none; }
+  .dp-md-none {
+    display: block; }
+  .justify-content-xs-end {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    /*align-items: flex-end;*/ }
   .container {
-    max-width: 350px; }
-  .footerList {
-    display: none; } }
+    max-width: 350px; } }
 
 /*
 header */
@@ -97,10 +106,13 @@ header {
   background-color: #AA0601;
   color: #ffffff; }
 
+.ham-icon {
+  display: none; }
+
 /*
 nav */
+/* 網站會有多個 nav 標籤,勿寫在html標籤nav上 */
 .navBar {
-  /* 網站會有多個 nav 標籤,勿寫在html標籤上 */
   height: 108px;
   padding-left: 88px;
   padding-right: 88px; }
@@ -190,7 +202,8 @@ footer {
     padding-left: 48px;
     padding-right: 48px; }
     .navBar h1 {
-      width: 80px; }
+      width: 80px;
+      margin: 0 auto; }
     .navBar ul li {
       margin-left: 28px; }
   .copyright img {
@@ -205,6 +218,85 @@ footer {
   .footerSns img {
     width: 24px;
     margin-left: 24px; } }
+
+@media (max-width: 630px) {
+  .navBar ul li {
+    font-size: 18px;
+    margin-left: 20px; } }
+
+@media (max-width: 576px) {
+  .navBar {
+    height: 50px; }
+    .navBar h1 {
+      width: 48px;
+      height: 29px;
+      background-size: contain; }
+  header {
+    position: relative; }
+  /*ham-icon*/
+  .ham-icon {
+    display: block;
+    position: absolute;
+    left: 13px;
+    color: #FFFFFF; }
+  .dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    max-height: 0px;
+    -webkit-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+    overflow: hidden;
+    z-index: 120; }
+  .dropdown.active {
+    max-height: 200px; }
+  .dropdown li a {
+    display: block;
+    background: #AA0601;
+    color: #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    padding: 16px 0;
+    text-decoration: none; }
+  .dropdown li a:hover {
+    background: #8f0400; }
+  /*footer*/
+  footer {
+    padding-top: 24px; }
+  .footerList {
+    display: none; }
+  .footerContent li {
+    /*display: flex;
+        align-items: center;*/
+    font-size: 1rem;
+    margin-bottom: 8px; }
+  .footerContent img {
+    width: 13px; }
+  .footerLast {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-top: 1px solid #fff;
+    padding-top: 24px;
+    margin-bottom: 27px; }
+    .footerLast .copyright {
+      margin-bottom: 8px; }
+      .footerLast .copyright img {
+        display: block;
+        width: 46px; }
+    .footerLast h5 span {
+      font-size: 14px;
+      margin-left: 0;
+      display: block; } }
 
 /* AOS */
 [data-aos="text-translateX-left"] {
@@ -221,7 +313,7 @@ footer {
   background-position: bottom center; }
 
 /*  
-topImg  常搞不懂背景圖與標題的愛恨糾葛... */
+topImg */
 .topImg {
   height: 840px;
   background: url(../images/banner.png) no-repeat;
@@ -607,7 +699,7 @@ Faq 常見問題 */
     font-weight: 700;
     margin-bottom: 1rem; }
 
-/* 收合 */
+/* card 收合 */
 .card-item {
   border: 1px solid #000000; }
   .card-item:not(.active) .up {
@@ -645,5 +737,21 @@ Faq 常見問題 */
 @media (max-width: 768px) {
   .topImgFaq {
     background: url(../images/qa_72.png) no-repeat; } }
+
+@media (max-width: 375px) {
+  .topImgFaq {
+    height: 143px;
+    background: url(../images/qa_72.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 1.5rem; }
+    .topImgFaq .topImgFaq-wrap .title h2 {
+      font-size: 1.75rem; }
+    .topImgFaq img {
+      width: 24px; }
+  .faqMain {
+    margin-bottom: 3.5rem; }
+    .faqMain h3 {
+      font-size: 1.25rem; } }
 
 /*# sourceMappingURL=all.css.map */

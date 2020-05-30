@@ -1,6 +1,11 @@
 "use strict";
 
-//faq 開闔
+// nav ham
+$('.ham-icon').click(function (e) {
+  e.preventDefault();
+  $('.dropdown').toggleClass('active');
+}); //faq 開闔
+
 $('.ham-icon').click(function (e) {
   e.preventDefault();
   $('.dropdown').toggleClass('active');

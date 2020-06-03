@@ -15,14 +15,14 @@
 <body>
     <div class="warp">
         <header>
-            <nav class="navBar d-flex justify-content-between align-items-center">
+            <nav class="navBar d-flex align-items-center">
+                <a href="#" class="ham-icon dp-none dp-xs-block">
+                    <img src="assets/images/icon-menu.svg" alt="han-icon">
+                </a>
                 <h1>
                     <a href="index.html"></a>
                 </h1>
-                <a href="#" class="ham-icon">
-                    <img src="assets/images/icon-menu.svg" alt="ham-icon">
-                </a>
-                <ul class="dropdown">
+                <ul class="dropdown d-flex">
                     <li><a href="index.html">系列鏡框</a></li>
                     <li><a href="#">門市據點</a></li>
                     <li><a href="#">部落格</a></li>
@@ -153,28 +153,28 @@
     <h2 data-aos="fade-down">顧客推薦</h2>
     <div class="container">
         <ul class="d-flex justify-content-between">
-            <li><img src="assets/images/rec-1.png" alt="">
+            <li data-aos="fade-down" data-aos-delay="200"><img src="assets/images/rec-1.png" alt="">
                 <div class="commendTxt">
                     <h4>Jessy</h4>
                     <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                     <h5>Last updated 3 mins ago</h5>
                 </div>
             </li>
-            <li><img src="assets/images/rec-2.png" alt="">
+            <li data-aos="fade-down" data-aos-delay="400"><img src="assets/images/rec-2.png" alt="">
                 <div class="commendTxt">
                     <h4>Karen</h4>
                     <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                     <h5>Last updated 3 mins ago</h5>
                 </div>
             </li>
-            <li><img src="assets/images/rec-3.png" alt="">
+            <li data-aos="fade-down" data-aos-delay="600"><img src="assets/images/rec-3.png" alt="">
                 <div class="commendTxt">
                     <h4>Chelsea</h4>
                     <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                     <h5>Last updated 3 mins ago</h5>
                 </div>
             </li>
-            <li><img src="assets/images/rec-4.png" alt="">
+            <li data-aos="fade-down" data-aos-delay="800"><img src="assets/images/rec-4.png" alt="">
                 <div class="commendTxt">
                     <h4>Jane</h4>
                     <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
@@ -190,7 +190,7 @@
         <h3>聯絡我們</h3>
         <p>我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
         <form>
-            <div class="form-group d-flex flex-column">
+            <div class="form-group d-flex flex-column" data-aos="slide-right" >
                 <label for="name">姓名</label>
                 <input id="name" type="text" placeholder="陳小明">
                 <label for="tel">聯絡電話</label>
@@ -214,31 +214,36 @@
 <script>
     AOS.init();
 </script>
-        <footer class="d-flex justify-content-between">
+        <footer data-aos="slide-up">
             <div class="container">
-                <div class="footerLinks d-flex justify-content-between">
-                    <ul class="d-flex dp-xs-none">
+                <div class="d-flex justify-content-between">
+                    <ul class="footerLinks d-flex dp-xs-none align-items-center">
                         <li><a href="index.html">首頁</a></li>
                         <li><a href="#">系列鏡框</a></li>
                         <li><a href="#">門市據點</a></li>
                         <li><a href="#">部落格</a></li>
                         <li><a href="faq.html">常見問題</a></li>
                     </ul>
-                    <div class="footerSns d-flex justify-content-xs-end">
-                        <a href="#" class="dp-xs-none"><img src="assets/images/icon-fb.svg" alt="fb"></a>
-                        <a href="#" class="dp-xs-none"><img src="assets/images/icon-ig.svg" alt="ig"></a>
-                        <a href="#"><img src="assets/images/icon-line.svg" alt="line"></a>
-                    </div>
+                    <ul class="footerSns d-flex justify-content-end">
+                        <li><a href="#" class="dp-mb-none dp-xs-block"><img src="assets/images/icon-fb.svg" alt="fb"></a></li>
+                        <li><a href="#" class="dp-mb-none dp-xs-block"><img src="assets/images/icon-ig.svg" alt="ig"></a></li>
+                        <li><a href="#"><img src="assets/images/icon-line.svg" alt="line"></a></li>
+                    </ul>                                        
                 </div>
+                
                 <ul class="footerContent">
                     <li><img src="assets/images/icon-phone.svg" alt=""><a href="#">0800-000-000</a></li>
                     <li><img src="assets/images/icon-mail.svg" alt=""><a href="#">glasses@business.com</a></li>
                 </ul>
+                
                 <div class="footerLast">
-                    <div class="copyright">
-                        <img src="assets/images/logo.png" alt="logo" class="dp-md-none">
-                        Copyright © 2020 Glasses.All rights reserved.</div>
-                    <h5><a href="#"><span>隱私權政策</span></a><a href="#"><span>服務條款</span></a></h5>
+                    <ul class="copyright">
+                        <li><img src="assets/images/logo.png" alt="logo" class="dp-md-none"></li>
+                        <li>Copyright © 2020 Glasses.All rights reserved.</li>
+                    </ul>
+                    <h5><a href="#">隱私權政策</a></h5>
+                    <h5><a href="#">服務條款</a></h5>
+                    <img src="assets/images/logo.png" alt="logo" class="dp-none dp-xs-block">
                 </div>
             </div>
         </footer>

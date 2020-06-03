@@ -15,11 +15,14 @@
 <body>
     <div class="warp">
         <header>
-            <nav class="navBar d-flex justify-content-between align-items-center">
+            <nav class="navBar d-flex align-items-center">
+                <a href="#" class="ham-icon dp-none dp-xs-block">
+                    <img src="assets/images/icon-menu.svg" alt="han-icon">
+                </a>
                 <h1>
                     <a href="index.html"></a>
                 </h1>
-                <ul>
+                <ul class="dropdown d-flex">
                     <li><a href="index.html">系列鏡框</a></li>
                     <li><a href="#">門市據點</a></li>
                     <li><a href="#">部落格</a></li>
@@ -29,35 +32,41 @@
         </header>
 
         <%- contents %>
-        <footer class="d-flex justify-content-between">
+        <footer data-aos="slide-up">
             <div class="container">
-                <div class="footerLinks d-flex justify-content-between">
-                    <ul class="d-flex">
+                <div class="d-flex justify-content-between">
+                    <ul class="footerLinks d-flex dp-xs-none align-items-center">
                         <li><a href="index.html">首頁</a></li>
                         <li><a href="#">系列鏡框</a></li>
                         <li><a href="#">門市據點</a></li>
                         <li><a href="#">部落格</a></li>
                         <li><a href="faq.html">常見問題</a></li>
                     </ul>
-                    <div class="footerSns d-flex">
-                        <a href="#"><img src="assets/images/icon-fb.svg" alt="fb"></a>
-                        <a href="#"><img src="assets/images/icon-ig.svg" alt="ig"></a>
-                        <a href="#"><img src="assets/images/icon-line.svg" alt="line"></a>
-                    </div>
+                    <ul class="footerSns d-flex justify-content-end">
+                        <li><a href="#" class="dp-mb-none dp-xs-block"><img src="assets/images/icon-fb.svg" alt="fb"></a></li>
+                        <li><a href="#" class="dp-mb-none dp-xs-block"><img src="assets/images/icon-ig.svg" alt="ig"></a></li>
+                        <li><a href="#"><img src="assets/images/icon-line.svg" alt="line"></a></li>
+                    </ul>                                        
                 </div>
+                
                 <ul class="footerContent">
                     <li><img src="assets/images/icon-phone.svg" alt=""><a href="#">0800-000-000</a></li>
                     <li><img src="assets/images/icon-mail.svg" alt=""><a href="#">glasses@business.com</a></li>
                 </ul>
+                
                 <div class="footerLast">
-                    <div class="copyright">
-                        <img src="assets/images/logo.png" alt="logo">
-                        Copyright © 2020 Glasses.All rights reserved.</div>
-                    <h5><a href="#"><span>隱私權政策</span></a><a href="#"><span>服務條款</span></a></h5>
+                    <ul class="copyright">
+                        <li><img src="assets/images/logo.png" alt="logo" class="dp-md-none"></li>
+                        <li>Copyright © 2020 Glasses.All rights reserved.</li>
+                    </ul>
+                    <h5><a href="#">隱私權政策</a></h5>
+                    <h5><a href="#">服務條款</a></h5>
+                    <img src="assets/images/logo.png" alt="logo" class="dp-none dp-xs-block">
                 </div>
             </div>
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
 </body>

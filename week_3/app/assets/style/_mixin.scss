@@ -1,0 +1,16 @@
+// breakpoints
+@mixin desk {
+    @media (max-width: 1920px) {
+        @content
+    }    
+}
+@mixin pad {
+    @media (max-width: 768px) {
+        @content
+    }    
+}
+@mixin mobile {
+    @media (max-width: 576px) {
+        @content
+    }    
+}

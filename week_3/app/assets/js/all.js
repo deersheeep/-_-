@@ -1,10 +1,10 @@
-//faq 開闔
+// ham-icon
 $('.ham-icon').click(function(e) {
   e.preventDefault();
   $('.dropdown').toggleClass('active')
 })
 
-
+// faq 開闔
 // 隱藏所有的 li 內文
 $('.card-item-body').hide();
 // 預設讓第一個 li 加上 active

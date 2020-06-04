@@ -72,8 +72,20 @@ ul {
   margin-right: 8px;
 }
 
+@media (max-width: 576px) {
+  .mr-xs-2 {
+    margin-right: 2px;
+  }
+}
+
 .mb-8 {
   margin-bottom: 8px;
+}
+
+@media (max-width: 576px) {
+  .mb-xs-2 {
+    margin-bottom: 2px;
+  }
 }
 
 .flex-1 {
@@ -551,8 +563,8 @@ topImg */
 
 .topImg h2 {
   font-size: 4rem;
-  font-weight: 600;
   line-height: 6rem;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
@@ -565,12 +577,14 @@ topImg */
 @media (max-width: 576px) {
   .topImg h2 {
     font-size: 2rem;
+    line-height: 2rem;
   }
 }
 
 .topImg h3 {
   font-size: 2.25rem;
   line-height: 54px;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
@@ -668,13 +682,14 @@ info    */
 
 @media (max-width: 768px) {
   .info .item li {
-    width: 224px;
+    width: 48%;
     margin-bottom: 40px;
   }
 }
 
 @media (max-width: 576px) {
   .info .item li {
+    width: 100%;
     margin-bottom: 28px;
   }
 }
@@ -741,6 +756,10 @@ product 經典系列鏡框*/
   }
 }
 
+.product .productItem {
+  max-width: 100%;
+}
+
 .product .productItem li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -772,13 +791,13 @@ product 經典系列鏡框*/
 
 @media (max-width: 768px) {
   .product .productItem li img {
-    width: 50%;
+    max-width: 48%;
   }
 }
 
 @media (max-width: 576px) {
   .product .productItem li img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -898,6 +917,8 @@ product 經典系列鏡框*/
   background-size: cover;
   /*contain 使背景圖在尺寸大於內容元素的情況下，得以完整呈現。*/
   background-position: center center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .product .productItem li .colorItem:hover::before {
@@ -911,7 +932,6 @@ co-Brand 聯名設計鏡框 */
   background-size: cover;
   background-position: top center;
   padding-top: 64px;
-  /*padding-bottom: 64px;*/
   padding-bottom: 400px;
 }
 
@@ -946,6 +966,26 @@ co-Brand 聯名設計鏡框 */
   .coBrand h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+  }
+}
+
+.coBrand li:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1280px) {
+  .coBrand li:first-child {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .coBrand li:first-child {
+    max-width: 672px;
+    /*margin: 0 auto;*/
   }
 }
 
@@ -1025,6 +1065,14 @@ co-Brand 聯名設計鏡框 */
           align-items: flex-end;
 }
 
+@media (max-width: 576px) {
+  .moreItem {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .moreItem span {
   position: absolute;
   color: #AA0601;
@@ -1047,9 +1095,14 @@ co-Brand 聯名設計鏡框 */
 @media (max-width: 576px) {
   .moreItem span {
     font-size: 26px;
-    -webkit-transform: translate(0%, -15%);
-            transform: translate(0%, -15%);
+    -webkit-transform: translate(0%, -12%);
+            transform: translate(0%, -12%);
   }
+}
+
+.moreItem span img {
+  -webkit-transform: translateY(2%);
+          transform: translateY(2%);
 }
 
 .moreItem span::before {
@@ -1091,6 +1144,18 @@ co-Brand 聯名設計鏡框 */
   -webkit-transform: translateX(0);
           transform: translateX(0);
   margin-right: 85px;
+}
+
+@media (max-width: 1280px) {
+  .moreImg {
+    margin-right: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .moreImg {
+    margin-right: 30%;
+  }
 }
 
 .moreImg::after {
@@ -1181,7 +1246,7 @@ commend 顧客推薦 */
 
 @media (max-width: 576px) {
   .commend li {
-    width: 94%;
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 1rem;
   }
@@ -1228,7 +1293,19 @@ contactUs  聯絡我們 */
 }
 
 .contactUs .container {
-  width: 800px;
+  max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .contactUs .container {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contactUs .container {
+    max-width: 330px;
+  }
 }
 
 .contactUs .container h3 {

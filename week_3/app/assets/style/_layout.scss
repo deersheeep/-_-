@@ -60,9 +60,19 @@ ul {
 .mr-8 {
     margin-right: 8px;
 }
+.mr-xs-2 {
+    @include mobile {
+        margin-right: 2px;
+    }
+}
 
 .mb-8 {
     margin-bottom: 8px;
+}
+.mb-xs-2 {
+    @include mobile {
+        margin-bottom: 2px;
+    }
 }
 
 .flex-1 {

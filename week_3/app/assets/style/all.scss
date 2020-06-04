@@ -39,9 +39,11 @@ topImg */
     justify-content: flex-end;
     align-items: center;
     padding: 0 80px;
+
     @include pad {
         padding: 0 48px;
     }
+
     @include mobile {
         height: 395px;
         padding: 0 12px;
@@ -54,24 +56,30 @@ topImg */
 
     h2 {
         font-size: 4rem;
-        font-weight: 600;
         line-height: 6rem;
+        font-weight: 700;
+
         @include pad {
             font-size: 3rem;
             line-height: 4.5rem;
         }
+
         @include mobile {
             font-size: 2rem;
+            line-height: 2rem;
         }
     }
 
     h3 {
         font-size: 2.25rem;
         line-height: 54px;
+        font-weight: 600;
+
         @include pad {
             font-size: 1.25rem;
             line-height: 30px;
         }
+
         @include mobile {
             font-size: 1rem;
         }
@@ -85,10 +93,12 @@ info    */
     background-color: #AA06010D;
     padding-top: 64px;
     margin-bottom: 64px;
-    @include pad{
+
+    @include pad {
         padding-top: 40px;
         margin-bottom: 40px;
     }
+
     @include mobile {
         padding-top: 32px;
         margin-bottom: 32px;
@@ -100,10 +110,12 @@ info    */
         font-weight: 600;
         text-align: center;
         margin-bottom: 60px;
+
         @include pad {
             font-size: 2rem;
             margin-bottom: 32px;
         }
+
         @include mobile {
             font-size: 1.5rem;
         }
@@ -114,6 +126,7 @@ info    */
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
+
         @include mobile {
             justify-content: center;
         }
@@ -124,11 +137,14 @@ info    */
             display: flex;
             flex-direction: column;
             align-items: center;
+
             @include pad {
-                width: 224px;
+                width: 48%;
                 margin-bottom: 40px;
             }
+
             @include mobile {
+                width: 100%;
                 margin-bottom: 28px;
             }
 
@@ -146,6 +162,7 @@ info    */
                 font-weight: 600;
                 text-align: center;
                 line-height: 36px;
+
                 @include pad {
                     font-size: 1.25rem;
                     line-height: 30px;
@@ -159,9 +176,11 @@ info    */
 product 經典系列鏡框*/
 .product {
     margin-bottom: 80px;
+
     @include pad {
         margin-bottom: 40px;
     }
+
     @include mobile {
         margin-bottom: 24px;
     }
@@ -172,121 +191,147 @@ product 經典系列鏡框*/
         font-weight: 600;
         margin-bottom: 60px;
         text-align: center;
+
         @include pad {
             font-size: 2rem;
             margin-bottom: 2rem;
         }
+
         @include mobile {
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
     }
 
-    .productItem li {
-        display: flex;
-        margin-bottom: 2rem;
-        @include pad {
-            margin-bottom: 0.5rem;            
-        }
-        @include mobile {
-            position: relative;
-            justify-content: center;
-            align-items: center;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-        img {   // 大圖
-            @include pad {
-                width: 50%;
-            }
-            @include mobile {
-                width: 100%;
-            }
-        }
-
-        h3 {
+    .productItem {
+        max-width: 100%;
+        @include pad {}
+        li {            
             display: flex;
-            align-items: center;
-            color: $bgcolor;
-            font-size: 3rem;
-            font-weight: 700;
-            font-style: italic;
-            text-transform: uppercase;
-            margin-left: 1.5rem;
+            margin-bottom: 2rem;
+
             @include pad {
-                font-size: 1.75rem;
-                margin: 0 auto;
-            }
-            @include mobile {
-                position: absolute;
-                color: #FFFFFF;
+                margin-bottom: 0.5rem;
             }
 
-            img {   //icon
-                margin-right: 8px;
+            @include mobile {
+                position: relative;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            img {
+                // 大圖
                 @include pad {
-                    width: 32px;
+                    max-width: 48%;
+                }
+
+                @include mobile {
+                    max-width: 100%;
                 }
             }
-            
-        }
 
-        &:nth-child(2) {
-            @include pad {
-                display: flex;
-                flex-direction: row-reverse;
-                justify-content: flex-end;
-            }
-            @include mobile {
-                justify-content: center;
-            }
             h3 {
-                margin-right: 1.5rem;
+                display: flex;
+                align-items: center;
+                color: $bgcolor;
+                font-size: 3rem;
+                font-weight: 700;
+                font-style: italic;
+                text-transform: uppercase;
+                margin-left: 1.5rem;
+
                 @include pad {
+                    font-size: 1.75rem;
                     margin: 0 auto;
                 }
+
                 @include mobile {
-                    z-index: 1;
+                    position: absolute;
+                    color: #FFFFFF;
                 }
-                img {   //icon
+
+                img {
+                    //icon
+                    margin-right: 8px;
+
                     @include pad {
                         width: 32px;
                     }
                 }
+
             }
 
-            img {
-                width: 100%;                
-            }
-        }
+            &:nth-child(2) {
+                @include pad {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+                }
 
-        .colorItem {
-            position: relative;   
-            @include pad {
-                width: 50%;
-            }
-            @include mobile {
-                width: 100%;
+                @include mobile {
+                    justify-content: center;
+                }
+
+                h3 {
+                    margin-right: 1.5rem;
+
+                    @include pad {
+                        margin: 0 auto;
+                    }
+
+                    @include mobile {
+                        z-index: 1;
+                    }
+
+                    img {
+                        //icon
+                        @include pad {
+                            width: 32px;
+                        }
+                    }
+                }
+
+                img {
+                    width: 100%;
+                }
             }
 
-            &::before {
-                content: '';
-                position: absolute;
-                background: url(../images/product-2-color.png) no-repeat;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                opacity: 0;
-                background-size: cover;
-                /*contain 使背景圖在尺寸大於內容元素的情況下，得以完整呈現。*/
-                background-position: center center;
-            }
+            .colorItem {
+                position: relative;
 
-            &:hover::before {
-                opacity: 1;
+                @include pad {
+                    width: 50%;
+                }
+
+                @include mobile {
+                    width: 100%;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background: url(../images/product-2-color.png) no-repeat;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    opacity: 0;
+                    background-size: cover;
+                    /*contain 使背景圖在尺寸大於內容元素的情況下，得以完整呈現。*/
+                    background-position: center center;
+                    transition: all .3s;
+                }
+
+                &:hover::before {
+                    opacity: 1;
+                    
+                    
+                }
             }
         }
     }
@@ -301,11 +346,12 @@ co-Brand 聯名設計鏡框 */
     background-size: cover;
     background-position: top center;
     padding-top: 64px;
-    /*padding-bottom: 64px;*/
     padding-bottom: 400px;
+
     @include pad {
         padding-top: 40px;
     }
+
     @include mobile {
         padding-top: 24px;
     }
@@ -316,13 +362,29 @@ co-Brand 聯名設計鏡框 */
         font-weight: 600;
         text-align: center;
         margin-bottom: 3.75rem;
+
         @include pad {
             font-size: 2rem;
             margin-bottom: 2rem;
         }
+
         @include mobile {
             font-size: 1.5rem;
             margin-bottom: 1rem;
+        }
+    }
+
+    li:first-child {
+        display: flex;
+
+        @include md-desk {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @include pad {
+            max-width: 672px;
+            /*margin: 0 auto;*/
         }
     }
 }
@@ -340,8 +402,10 @@ co-Brand 聯名設計鏡框 */
         flex-wrap: wrap;
     }
 }
+
 .itemBrand {
     position: relative;
+
     @include mobile {
         margin-bottom: 20px;
     }
@@ -366,7 +430,9 @@ co-Brand 聯名設計鏡框 */
         transform: translate(-50%, -50%);
         /* transform 垂直置中 */
         z-index: 1;
-        white-space: nowrap;/* 不換行 */
+        white-space: nowrap;
+
+        /* 不換行 */
         @include pad {
             font-weight: 700;
             font-size: 2rem;
@@ -375,9 +441,10 @@ co-Brand 聯名設計鏡框 */
 
     &:first-of-type {
         margin-right: 1.25rem;
+
         @include mobile {
             margin-right: 0;
-            
+
         }
     }
 }
@@ -385,6 +452,10 @@ co-Brand 聯名設計鏡框 */
 /*  more魔王 */
 .moreItem {
     align-items: flex-end;
+
+    @include mobile {
+        align-items: flex-start;
+    }
 
     span {
         position: absolute;
@@ -394,13 +465,19 @@ co-Brand 聯名設計鏡框 */
         transform: translate(0%, 20%);
         white-space: nowrap;
         z-index: 1;
+
         @include pad {
             font-size: 2.5rem;
             transform: translate(0%, -10%);
         }
+
         @include mobile {
             font-size: 26px;
-            transform: translate(0%, -15%);
+            transform: translate(0%, -12%);
+        }
+
+        img {
+            transform: translateY(2%);
         }
 
         &::before {
@@ -436,6 +513,14 @@ co-Brand 聯名設計鏡框 */
     transition: all .6s .3s;
     transform: translateX(0);
     margin-right: 85px;
+   
+    @include md-desk {
+        margin-right: 20%;
+    }
+    @include pad {
+        margin-right: 30%;
+    }
+
 
     &::after {
         content: '';
@@ -455,10 +540,11 @@ co-Brand 聯名設計鏡框 */
 
     span {
         padding: 5px 0 5px 32px;
+
         @include pad {
             img {
                 max-width: 30%;
-                }
+            }
         }
     }
 }
@@ -469,10 +555,11 @@ commend 顧客推薦 */
 .commend {
     margin-top: -300px;
     margin-bottom: 80px;
-    
+
     @include pad {
         margin-bottom: 40px;
     }
+
     @include mobile {
         margin-bottom: 24px;
     }
@@ -483,28 +570,33 @@ commend 顧客推薦 */
         font-weight: 600;
         text-align: center;
         margin-bottom: 60px;
+
         @include pad {
             font-size: 2rem;
             margin-bottom: 32px;
         }
+
         @include mobile {
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
     }
+
     ul {
         flex-wrap: wrap;
     }
 
-    li {        
+    li {
         background-color: #fff;
         width: 23.5%;
+
         @include pad {
             width: 48%;
             margin-bottom: 1.5rem;
         }
+
         @include mobile {
-            width: 94%;
+            width: 90%;
             margin: 0 auto;
             margin-bottom: 1rem;
         }
@@ -535,17 +627,28 @@ contactUs  聯絡我們 */
     background-color: #AA06010D;
     padding-top: 64px;
     padding-bottom: 92px;
+
     @include pad {
         padding-top: 40px;
         padding-bottom: 56px;
     }
+
     @include mobile {
         padding-top: 24px;
         padding-bottom: 48px;
     }
 
     .container {
-        width: 800px;
+        max-width: 800px;
+
+        @include pad {
+            max-width: 500px;
+        }
+
+        @include mobile {
+            max-width: 330px;
+        }
+
 
         h3 {
             color: #000;
@@ -553,10 +656,12 @@ contactUs  聯絡我們 */
             font-weight: 600;
             text-align: center;
             margin-bottom: 24px;
+
             @include pad {
                 font-size: 2rem;
                 margin-bottom: 1rem;
             }
+
             @include mobile {
                 font-size: 1.5rem;
                 margin-bottom: .5rem;
@@ -567,10 +672,12 @@ contactUs  聯絡我們 */
             font-size: 1.25rem;
             line-height: 30px;
             margin-bottom: 15px;
+
             @include pad {
                 font-size: 1rem;
                 line-height: 24px;
             }
+
             @include mobile {}
         }
     }
@@ -589,13 +696,17 @@ contactUs  聯絡我們 */
         border: 1px solid #000;
         padding: 14px 16px;
         margin-bottom: 16px;
-        background: transparent;    /*透明色*/
-        outline: 0; /* 會影響到無障礙tab作用嗎? */
+        background: transparent;
+        /*透明色*/
+        outline: 0;
+
+        /* 會影響到無障礙tab作用嗎? */
         @include pad {
             padding: 14px 16px;
             margin-bottom: 12px;
         }
-        @include mobile{
+
+        @include mobile {
             padding: 7px 12px;
         }
     }
@@ -751,7 +862,9 @@ Faq 常見問題 */
         font-size: 1rem;
         line-height: 24px;
         font-weight: bold;
+
         @include pad {}
+
         @include mobile {}
 
     }

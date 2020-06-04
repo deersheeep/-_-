@@ -1,39 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿---
+title: 第七週作業
+layout: ./app/layout.ejs
+engine: ejs
+current: AOS - animations
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>
-        第四週作業
-    </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="./assets/style/all.css">
-</head>
-
-<body>
-    <div class="warp">
-        <header>
-            <nav class="navBar d-flex align-items-center">
-                <a href="#" class="ham-icon dp-none dp-xs-block">
-                    <img src="assets/images/icon-menu.svg" alt="han-icon">
-                </a>
-                <h1>
-                    <a href="index.html"></a>
-                </h1>
-                <ul class="dropdown d-flex">
-                    <li><a href="index.html">系列鏡框</a></li>
-                    <li><a href="#">門市據點</a></li>
-                    <li><a href="#">部落格</a></li>
-                    <li><a href="faq.html">常見問題</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        
 <section class="topImg">
-    <div class="title">
+    <div class="title" class="topImg-wrapper" data-aos="fade-right">
         <h3>Promise-Desert 2020 早春系列</h3>
         <h2>看得清，才能看得遠</h2>
     </div>
@@ -41,24 +14,24 @@
 
 <section class="info">
     <div class="container">
-        <h3>用專業的心，做專業的事</h3>
+        <h3 data-aos="fade-down">用專業的心，做專業的事</h3>
         <ul class="item">
-            <li>
+            <li data-aos="zoom-in">
                 <img src="assets/images/icon-dollar.svg" alt="dollar">
                 <h4>單一價格</h4>
                 <p>無論任何度數皆不需追加費用 即可擁有適合自己的薄型球面鏡片。</p>
             </li>
-            <li>
+            <li data-aos="zoom-in" data-aos-delay="200">
                 <img src="assets/images/icon-clock.svg" alt="clock">
                 <h4>20 分鐘即可取件</h4>
                 <p>為了您的寶貴時間著想，以豐富專業知識與技術將結帳到交件的時間縮減至最快 20 分鐘 即可完成。</p>
             </li>
-            <li>
+            <li data-aos="zoom-in" data-aos-delay="400">
                 <img src="assets/images/icon-heart.svg" alt="heart">
                 <h4>安心售後服務</h4>
                 <p>我們提供長達 120 天的保固售後服務，不限會員資格皆享有免費深層保養及專業維修服務。</p>
             </li>
-            <li>
+            <li data-aos="zoom-in" data-aos-delay="600">
                 <img src="assets/images/icon-glasses.svg" alt="glasses">
                 <h4>關於鏡片</h4>
                 <p>使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。</p>
@@ -69,14 +42,14 @@
 
 <section class="product">
     <div class="container">
-        <h2>經典系列鏡框</h2>
+        <h2 data-aos="fade-down">經典系列鏡框</h2>
         <ul class="productItem">
-            <li>
+            <li data-aos="fade-right" data-aos-delay="200">
                 <img src="assets/images/product-1.png" alt="optical">
                 <h3><img src="assets/images/icon-diamond.svg" alt="diamond"> optical
                 </h3>
             </li>
-            <li>
+            <li data-aos="fade-left" data-aos-delay="400">
                 <h3><img src="assets/images/icon-sun.svg" alt="sun">sunglasses</h3>
                 <div class="colorItem">                    
                     <img src="assets/images/product-2.png" alt="sunglasses">
@@ -84,7 +57,7 @@
                 <!-- img無法使用偽元素 故在外包div操作 -->
 
             </li>
-            <li>
+            <li data-aos="fade-right" data-aos-delay="600">
                 <img src="assets/images/product-3.png" alt="functional">
                 <h3><img src="assets/images/icon-thunder.svg" alt="thunder">functional</h3>
             </li>
@@ -99,29 +72,29 @@
         <li class="item d-flex justify-content-center">
 
             <ul class="coBrandList">
-                <li class="mr-8 mr-xs-2">
+                <li class="mr-8 mr-xs-2" data-aos="fade-down">
                     <a href="#">
                         <img class="flex-1" src="assets/images/product-4.png" alt="黑人">
                     </a>
                 </li>
 
-                <li>
+                <li data-aos="fade-right">
                     <a href="#">
                         <img class="mb-8 mb-xs-2 flex-2" src="assets/images/product-5.png" alt="墨鏡女">
                     </a>
                     <div class="d-flex mb-8 mb-xs-2">
                         <!-- left -->
-                        <a class="mr-8" href="#">
+                        <a class="mr-8" href="#" data-aos="fade-down">
                             <img src="assets/images/product-6.png" alt="單眼">
                         </a>
                         <!-- right -->
                         <div class="moreItem d-flex flex-column">
                             <!--上-->
-                            <a href="#">
+                            <a href="#" data-aos="fade-up">
                                 <img class="mb-8 mb-xs-2" src="assets/images/product-7.png" alt="黑白女">
                             </a>
                             <!-- 下 -->
-                            <a href="#" class="moreImg d-flex">
+                            <a href="#" class="moreImg d-flex"  data-aos="fade-right">
                                 <img src="assets/images/more.png" alt="more魔王">
                                 <span class="d-flex">MORE <img src="assets/images/icon-arrow.svg" alt="arrow"></span>
                             </a>
@@ -134,11 +107,11 @@
         </li>
         <!-- 下面兩塊 -->
         <li class="itemB container d-flex">
-            <div class="itemBrand">
+            <div class="itemBrand" data-aos="fade-left">
                 <img src="assets/images/product-8.png" alt="">
                 <span>Double A+</span>
             </div>
-            <div class="itemBrand">
+            <div class="itemBrand" data-aos="fade-right">
                 <img src="assets/images/product-9.png" alt="">
                 <span>YOUTH</span>
             </div>
@@ -148,31 +121,31 @@
 </section>
 
 <section class="commend">
-    <h2>顧客推薦</h2>
+    <h2 data-aos="fade-down">顧客推薦</h2>
     <div class="container">
         <ul class="d-flex justify-content-between">
-            <li><img src="assets/images/rec-1.png" alt="">
+            <li data-aos="fade-down" data-aos-delay="200"><img src="assets/images/rec-1.png" alt="">
                 <div class="commendTxt">
                     <h4>Jessy</h4>
                     <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                     <p class="time">Last updated 3 mins ago</p>
                 </div>
             </li>
-            <li><img src="assets/images/rec-2.png" alt="">
+            <li data-aos="fade-down" data-aos-delay="400"><img src="assets/images/rec-2.png" alt="">
                 <div class="commendTxt">
                     <h4>Karen</h4>
                     <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                     <p class="time">Last updated 3 mins ago</p>
                 </div>
             </li>
-            <li><img src="assets/images/rec-3.png" alt="">
+            <li data-aos="fade-down" data-aos-delay="600"><img src="assets/images/rec-3.png" alt="">
                 <div class="commendTxt">
                     <h4>Chelsea</h4>
                     <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                     <p  class="time">Last updated 3 mins ago</p>
                 </div>
             </li>
-            <li><img src="assets/images/rec-4.png" alt="">
+            <li data-aos="fade-down" data-aos-delay="800"><img src="assets/images/rec-4.png" alt="">
                 <div class="commendTxt">
                     <h4>Jane</h4>
                     <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
@@ -188,7 +161,7 @@
         <h3>聯絡我們</h3>
         <p>我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
         <form>
-            <div class="form-group d-flex flex-column">
+            <div class="form-group d-flex flex-column" data-aos="slide-right">
                 <label for="name">姓名</label>
                 <input id="name" type="text" placeholder="陳小明">
                 <label for="tel">聯絡電話</label>
@@ -207,43 +180,9 @@
         </form>
     </div>
 </section>
-        <footer data-aos="slide-up">
-            <div class="container">
-                <div class="d-flex justify-content-between">
-                    <ul class="footerLinks d-flex dp-xs-none align-items-center">
-                        <li><a href="index.html">首頁</a></li>
-                        <li><a href="#">系列鏡框</a></li>
-                        <li><a href="#">門市據點</a></li>
-                        <li><a href="#">部落格</a></li>
-                        <li><a href="faq.html">常見問題</a></li>
-                    </ul>
-                    <ul class="footerSns d-flex justify-content-end">
-                        <li><a href="#" class="dp-mb-none dp-xs-block"><img src="assets/images/icon-fb.svg" alt="fb"></a></li>
-                        <li><a href="#" class="dp-mb-none dp-xs-block"><img src="assets/images/icon-ig.svg" alt="ig"></a></li>
-                        <li><a href="#"><img src="assets/images/icon-line.svg" alt="line"></a></li>
-                    </ul>                                        
-                </div>
-                
-                <ul class="footerContent">
-                    <li><img src="assets/images/icon-phone.svg" alt=""><a href="#">0800-000-000</a></li>
-                    <li><img src="assets/images/icon-mail.svg" alt=""><a href="#">glasses@business.com</a></li>
-                </ul>
-                
-                <div class="footerLast">
-                    <ul class="copyright">
-                        <li><img src="assets/images/logo.png" alt="logo" class="dp-md-none"></li>
-                        <li>Copyright © 2020 Glasses.All rights reserved.</li>
-                    </ul>
-                    <h5><a href="#">隱私權政策</a></h5>
-                    <h5><a href="#">服務條款</a></h5>
-                    <img src="assets/images/logo.png" alt="logo" class="dp-none dp-xs-block">
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-    <script src="./assets/js/vendors.js"></script>
-    <script src="./assets/js/all.js"></script>
-</body>
 
-</html>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>

@@ -541,7 +541,8 @@ product 經典系列鏡框*/
         font-size: 1.5rem;
         margin-bottom: 1rem; } }
   .product .productItem {
-    max-width: 100%; }
+    max-width: 100%;
+    overflow: hidden; }
     .product .productItem li {
       display: -webkit-box;
       display: -ms-flexbox;
